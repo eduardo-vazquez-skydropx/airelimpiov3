@@ -100,7 +100,7 @@ export default class PurpleAirService{
       const infoPromises=monitors.map(async monitor=>{
         
         //Si no es modelo purple regresa valores para FWOP
-        if(monitor.model.name!=MODEL_PURPLE){
+        if(!monitor.model || monitor.model.name!=MODEL_PURPLE){
           return {
             monitor:monitor,
             "PM_2.5":0,

@@ -3,11 +3,11 @@ import '../css/app.css'
 export default class AppGlobal {
 
     //Limites de contaminantes NOM
-    LIM_NOM_PM2=41
-    LIM_NOM_PM10=70
+    LIM_NOM_PM2=33
+    LIM_NOM_PM10=60
 
     //Limites de contaminantes OMS
-    LIM_OMS_PM2=15
+    LIM_OMS_PM2=25
     LIM_OMS_PM10=45
 
     decodeData(data){
@@ -83,13 +83,13 @@ export default class AppGlobal {
             datasets: [
                 {
                     label: 'Límite NOM (ug/m^3)',
-                    data: n,
+                    data: o,
                     fill: false,
                     borderColor:'#F90000' ,
                     tension: 0.1
                 },{
                     label: 'Límite OMS (ug/m^3)',
-                    data: o,
+                    data: n,
                     fill: false,
                     borderColor: '#33B0FF',
                     tension: 0.1
